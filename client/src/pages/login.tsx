@@ -42,7 +42,7 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start pt-6 bg-white max-w-md mx-auto overflow-hidden touch-none">
+    <div className="min-h-screen flex flex-col items-center justify-start pt-6 bg-white max-w-md mx-auto">
       <div className="w-full max-w-xs px-2">
         <div className="flex justify-center mb-5">
           <div className="relative">
@@ -60,8 +60,8 @@ export default function Login() {
           </div>
         </div>
         
-        <div className="flex justify-center mb-8 mt-12">
-          <img src="/images/instagram_logo.png" alt="Instagram" className="h-14 w-auto" />
+        <div className="flex justify-center mb-8 mt-8">
+          <img src="/images/instagram_logo.png" alt="Instagram" className="h-16 w-auto" />
         </div>
         
         <Button
@@ -152,6 +152,35 @@ export default function Login() {
           <p className="mb-4 px-8">
             Ayrıca ülkende giriş yapmadan <span className="text-[#00376B]">yasa dışı olduğunu düşündüğün içeriği şikayet edebilirsin</span>.
           </p>
+        </div>
+        
+        {/* Alt kısımdaki linkler */}
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs text-gray-500 mb-2 mt-12">
+          <a href="#" className="hover:underline">Meta</a>
+          <a href="#" className="hover:underline">Hakkında</a>
+          <a href="#" className="hover:underline">Blog</a>
+          <a href="#" className="hover:underline">İş Fırsatları</a>
+          <a href="#" className="hover:underline">Yardım</a>
+          <a href="#" className="hover:underline">API</a>
+          <a href="#" className="hover:underline">Gizlilik</a>
+          <a href="#" className="hover:underline">Çerez Ayarları</a>
+          <a href="#" className="hover:underline">Koşullar ve Künye</a>
+          <a href="#" className="hover:underline">Konumlar</a>
+          <a href="#" className="hover:underline">Instagram Lite</a>
+          <a href="#" className="hover:underline">Threads</a>
+          <a href="#" className="hover:underline">Kişi Yükleme ve Hesabı Olmayan Kişiler</a>
+          <a href="#" className="hover:underline">Meta Verified</a>
+          <a href="#" className="hover:underline">Sözleşmeleri burada iptal et</a>
+        </div>
+        
+        <div className="flex justify-center items-center gap-2 text-xs text-gray-500 mb-8">
+          <select
+            className="appearance-none text-xs font-normal text-gray-500 bg-transparent pr-6 focus:outline-none"
+            defaultValue="tr"
+          >
+            <option value="tr">Türkçe</option>
+          </select>
+          <span>© 2025 Instagram from Meta</span>
         </div>
       </div>
     </div>

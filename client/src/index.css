@@ -6,7 +6,6 @@
   html {
     @apply text-base;
     font-size: 16px;
-    touch-action: none;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
   }
@@ -15,10 +14,7 @@
     @apply bg-white text-gray-900 font-sans antialiased;
     overflow-x: hidden;
     max-width: 100%;
-    position: fixed;
-    inset: 0;
-    touch-action: none;
-    user-select: none;
+    touch-action: pan-y;
   }
   
   * {
