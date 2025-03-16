@@ -20,6 +20,20 @@
   * {
     @apply border-border;
   }
+
+  input:focus, input:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #dbdbdb !important;
+    ring: 0 !important;
+    -webkit-appearance: none;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 }
 
 /* Özel Instagram stili */
@@ -28,17 +42,51 @@
     @apply text-gray-400;
   }
   
-  input:focus {
-    @apply outline-none ring-0 border-gray-300;
-  }
-  
   /* Zoom'u devre dışı bırak */
   input, button, a, select {
     touch-action: manipulation;
+  }
+
+  .focus-visible:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #dbdbdb !important;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #fafafa inset !important;
   }
 }
 
 /* Facebook butonu için özel stil */
 button svg {
   @apply transform-none;
+}
+
+/* Instagram butonları ve form elementleri için özel stiller */
+.instagram-btn {
+  background-color: #0095F6 !important;
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  height: auto !important;
+  padding: 7px 16px !important;
+}
+
+.instagram-input {
+  background-color: #fafafa !important;
+  border-color: #dbdbdb !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  padding: 9px 8px !important;
+  height: 36px !important;
+}
+
+.instagram-input:focus {
+  border-color: #dbdbdb !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
