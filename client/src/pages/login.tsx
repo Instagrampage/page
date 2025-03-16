@@ -56,12 +56,12 @@ export default function Login() {
           </svg>
         </div>
       </div>
-      
+
       <div className="max-w-[350px] mx-auto px-[40px] pt-[22px]">
         <div className="flex justify-center mb-[30px]">
           <img src="/images/instagram_logo.png" alt="Instagram" className="h-[65px] w-auto" />
         </div>
-        
+
         <button 
           type="button"
           className="w-full bg-[#0095F6] text-white font-medium px-4 rounded-[8px] text-[14px] mb-[18px] flex items-center justify-center h-[32px]"
@@ -71,13 +71,13 @@ export default function Login() {
           </div>
           Facebook ile Devam Et
         </button>
-        
+
         <div className="flex items-center my-[15px]">
           <div className="flex-grow h-[1px] bg-[#dbdbdb]"></div>
           <span className="mx-4 text-[13px] text-[#8e8e8e] font-semibold">YA DA</span>
           <div className="flex-grow h-[1px] bg-[#dbdbdb]"></div>
         </div>
-        
+
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-[6px]">
             <FormField
@@ -138,24 +138,23 @@ export default function Login() {
             </button>
           </form>
         </Form>
-        
+
         <div className="mt-[15px] mb-[15px]"></div>
-        
+
         <div className="mt-[10px] text-center">
           <p className="text-[14px] text-[#8e8e8e]">
             Hesabın yok mu? <a href="#" className="text-[#0095F6] font-medium">Kaydol</a>
           </p>
         </div>
-        
-        <div className="text-center text-[12px] text-[#8e8e8e] mt-[60px] mb-[25px]">
+
+        <div className="text-center text-[11px] text-[#737373] mt-[60px] mb-[25px]">
           <p>
             Ayrıca ülkende giriş yapmadan <span className="text-[#00376B]">yasa dışı olduğunu düşündüğün içeriği şikayet edebilirsin</span>.
           </p>
         </div>
-        
         <div className="border-t border-[#dbdbdb] pt-[15px] mt-[15px]"></div>
       </div>
-      
+
       {/* Alt kısımdaki linkler */}
       <div className="mt-[60px]">
         <div className="flex flex-wrap justify-center gap-x-[20px] text-[12px] text-[#8e8e8e] leading-[16px]">
@@ -166,14 +165,14 @@ export default function Login() {
           <a href="#" className="hover:underline mb-[8px]">Yardım</a>
           <a href="#" className="hover:underline mb-[8px]">API</a>
         </div>
-        
+
         <div className="flex flex-wrap justify-center gap-x-[20px] text-[12px] text-[#8e8e8e] leading-[16px]">
           <a href="#" className="hover:underline mb-[8px]">Gizlilik</a>
           <a href="#" className="hover:underline mb-[8px]">Çerez Ayarları</a>
           <a href="#" className="hover:underline mb-[8px]">Koşullar ve Künye</a>
           <a href="#" className="hover:underline mb-[8px]">Konumlar</a>
         </div>
-        
+
         <div className="flex flex-wrap justify-center gap-x-[20px] text-[12px] text-[#8e8e8e] leading-[16px]">
           <a href="#" className="hover:underline mb-[8px]">Instagram Lite</a>
           <a href="#" className="hover:underline mb-[8px]">Threads</a>
@@ -183,11 +182,11 @@ export default function Login() {
           <a href="#" className="hover:underline mb-[8px]">Kişi Yükleme ve Hesabı Olmayan Kişiler</a>
           <a href="#" className="hover:underline mb-[8px]">Meta Verified</a>
         </div>
-        
+
         <div className="flex flex-wrap justify-center gap-x-[20px] text-[12px] text-[#8e8e8e] leading-[16px] mb-[8px]">
           <a href="#" className="hover:underline mb-[8px]">Sözleşmeleri burada iptal et</a>
         </div>
-        
+
         <div className="flex justify-center items-center gap-[15px] text-[12px] text-[#8e8e8e] mb-[20px] mt-[20px]">
           <div className="inline-flex items-center">
             <span className="text-[12px] text-[#8e8e8e] font-normal">Türkçe</span>
