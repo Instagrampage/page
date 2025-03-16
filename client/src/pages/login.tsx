@@ -115,7 +115,7 @@ export default function Login() {
                 </FormItem>
               )}
             />
-            <div className="text-right py-[4px] mt-[20px]">
+            <div className="text-right py-[4px] mt-[20px] mb-[14px]">
               <a href="#" className="text-[13px] text-[#0095F6] font-normal">
                 Şifreni mi unuttun?
               </a>
@@ -138,7 +138,7 @@ export default function Login() {
         </Form>
 
 
-        <div className="mt-[10px] text-center">
+        <div className="mt-[20px] text-center">
           <p className="text-[14px] text-[#8e8e8e]">
             Hesabın yok mu? <a href="#" className="text-[#0095F6] font-medium">Kaydol</a>
           </p>
