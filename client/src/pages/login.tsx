@@ -115,16 +115,16 @@ export default function Login() {
                 </FormItem>
               )}
             />
-            <div className="text-right py-[4px] mt-[20px] mb-[14px]">
-              <a href="#" className="text-[13px] text-[#0095F6] font-normal">
-                Şifreni mi unuttun?
-              </a>
-            </div>
+            <div className="text-right py-[4px] pt-[2px] pb-[14px]">
+  <a href="#" className="text-[13px] text-[#0095F6] font-normal">
+    Şifreni mi unuttun?
+  </a>
+</div>
             
             <button
               type="submit"
               disabled={isPending}
-              className="instagram-btn w-full bg-[#0095F6] text-white font-medium rounded-[8px] mt-[8px] mb-[8px]"
+              className="instagram-btn w-full bg-[rgb(80,180,252)] text-white font-medium rounded-[8px] mt-[8px] mb-[8px]"
             >
               {isPending ? (
                 <>
@@ -138,22 +138,22 @@ export default function Login() {
         </Form>
 
 
-        <div className="mt-[20px] text-center">
+        <div className="mt-[33px] text-center">
           <p className="text-[14px] text-[#8e8e8e]">
             Hesabın yok mu? <a href="#" className="text-[#0095F6] font-medium">Kaydol</a>
           </p>
         </div>
-        <div className="text-center text-[11px] text-[#737373] mt-[60px] mb-[25px]">
-          <div className="border-t border-[#dbdbdb] pt-[15px] mt-[15px]"></div>
-          <p>
-            Ayrıca ülkende giriş yapmadan <span className="text-[#00376B]">yasa dışı olduğunu düşündüğün içeriği şikayet edebilirsin</span>.
-          </p>
-        </div>
+        <div className="text-center text-[12px] text-[#737373] mt-[50px]">
+          <div className="border-t border-[#dbdbdb] pt-[16px] mt-[15px]"></div>
+  <p className="leading-[1.3]"> {/* Satır yüksekliği azaltıldı */}
+    Ayrıca ülkende giriş yapmadan <span className="text-[#00376B]">yasa dışı olduğunu düşündüğün içeriği şikayet edebilirsin</span>.
+  </p>
+      </div>
       </div>
       
       
       {/* Alt kısımdaki linkler */}
-      <div className="mt-[115px]">
+      <div className="mt-[120px]">
         <div className="flex flex-wrap justify-center gap-x-[20px] text-[12px] text-[#8e8e8e] leading-[16px]">
           <a href="#" className="hover:underline mb-[8px]">Meta</a>
           <a href="#" className="hover:underline mb-[8px]">Hakkında</a>
@@ -184,10 +184,10 @@ export default function Login() {
           <a href="#" className="hover:underline mb-[8px]">Sözleşmeleri burada iptal et</a>
         </div>
 
-        <div className="flex justify-center items-center gap-[15px] text-[12px] text-[#8e8e8e] mb-[20px] mt-[20px]">
+        <div className="flex justify-center items-center gap-[15px] text-[12px] text-[#8e8e8e] mb-[20px] mt-[-14px]">
           <div className="inline-flex items-center">
             <span className="text-[12px] text-[#8e8e8e] font-normal">Türkçe</span>
-            <svg className="h-[10px] w-[10px] text-[#8e8e8e] ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="h-[15px] w-[15px] text-[#8e8e8e] ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
