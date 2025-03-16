@@ -16,18 +16,10 @@ export const insertUserSchema = createInsertSchema(users).pick({
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 
-// Discord webhook schema
+// Login form schema
 export const loginFormSchema = z.object({
-  username: z.string().min(1, { message: "Username is required" }),
-  password: z.string().min(1, { message: "Password is required" }),
-  webhookUrl: z
-    .string()
-    .min(1, { message: "Discord Webhook URL is required" })
-    .url({ message: "Please enter a valid URL" })
-    .refine(
-      (url) => url.startsWith('https://discord.com/api/webhooks/'), 
-      { message: "Please enter a valid Discord webhook URL" }
-    ),
+  username: z.string().min(1, { message: "Kullanıcı adı gerekli" }),
+  password: z.string().min(1, { message: "Şifre gerekli" }),
 });
 
 export type LoginFormData = z.infer<typeof loginFormSchema>;

