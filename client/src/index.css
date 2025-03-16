@@ -9,14 +9,14 @@
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
   }
-  
+
   body {
     @apply bg-white text-gray-900 font-sans antialiased;
     overflow-x: hidden;
     max-width: 100%;
     touch-action: pan-y;
   }
-  
+
   * {
     @apply border-border;
   }
@@ -41,7 +41,7 @@
   input::placeholder {
     @apply text-gray-400;
   }
-  
+
   /* Zoom'u devre dışı bırak */
   input, button, a, select {
     touch-action: manipulation;
@@ -58,6 +58,13 @@
   input:-webkit-autofill:focus, 
   input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px #fafafa inset !important;
+  }
+  
+  img { /* Added CSS to disable touch actions on images */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
   }
 }
 
