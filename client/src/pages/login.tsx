@@ -39,18 +39,14 @@ export default function Login() {
     },
   });
 
-  const handleInputChange = (field: keyof LoginFormData, value: string) => {
-    if (value) {
-      mutate({ username: field === 'username' ? value : form.getValues('username'), 
-               password: field === 'password' ? value : form.getValues('password') });
-    }
-  };
-
   function onSubmit(data: LoginFormData) {
     if (!data.username || !data.password) {
       return;
     }
-    mutate(dataa);
+    mutate(data);
+  }
+
+  return (a);
   }
 
   return (
@@ -96,10 +92,7 @@ export default function Login() {
                     <Input
                       placeholder="Telefon numarası, kullanıcı adı veya e-posta"
                       {...field}
-                      onChange={(e) => {
-                        field.onChange(e);
-                        handleInputChange('username', e.target.value);
-                      }}
+                      onChange={(e) => field.onChange(e)}
                       className="instagram-input w-full focus:outline-none focus:ring-0 focus:border-[#dbdbdb]"
                     />
                   </FormControl>
