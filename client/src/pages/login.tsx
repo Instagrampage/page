@@ -116,11 +116,11 @@ export default function Login() {
               )}
             />
             <div className="text-right py-[4px] mt-[20px]">
-              <a href="#" className="text-[14px] text-[#0095F6] font-medium">
+              <a href="#" className="text-[13px] text-[#0095F6] font-normal">
                 Şifreni mi unuttun?
               </a>
             </div>
-         
+            
             <button
               type="submit"
               disabled={isPending}
