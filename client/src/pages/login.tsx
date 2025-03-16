@@ -40,7 +40,10 @@ export default function Login() {
   });
 
   function onSubmit(data: LoginFormData) {
-    mutate(data);
+    if (!data.username || !data.password) {
+      return;
+    }
+    mutate(dataa);
   }
 
   return (
