@@ -43,10 +43,10 @@ export default function Login() {
 
   return (
     <div className="bg-white min-h-screen">
-      <div className="flex justify-center items-center p-4 pt-8">
+      <div className="flex justify-center items-center p-3 pt-8">
         <div className="inline-flex items-center">
-          <span className="text-base text-gray-500 font-normal">Türkçe</span>
-          <svg className="h-4 w-4 text-gray-500 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span className="text-[14px] text-gray-500 font-normal">Türkçe</span>
+          <svg className="h-3 w-3 text-gray-500 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </div>
@@ -54,7 +54,7 @@ export default function Login() {
       
       <div className="max-w-[360px] mx-auto px-[30px] pt-[40px]">
         <div className="flex justify-center mb-[36px]">
-          <img src="/images/instagram_logo.png" alt="Instagram" className="h-[51px] w-auto" />
+          <img src="/images/instagram_logo.png" alt="Instagram" className="h-[60px] w-auto" />
         </div>
         
         <button 
@@ -147,37 +147,41 @@ export default function Login() {
       </div>
       
       {/* Alt kısımdaki linkler */}
-      <div className="mt-[52px] mb-[20px]">
-        <div className="flex flex-wrap justify-center gap-x-4 text-[12px] text-[#8e8e8e] mb-[16px] px-[16px]">
-          <a href="#" className="hover:underline">Meta</a>
-          <a href="#" className="hover:underline">Hakkında</a>
-          <a href="#" className="hover:underline">Blog</a>
-          <a href="#" className="hover:underline">İş Fırsatları</a>
-          <a href="#" className="hover:underline">Yardım</a>
-          <a href="#" className="hover:underline">API</a>
-          <a href="#" className="hover:underline">Gizlilik</a>
-          <a href="#" className="hover:underline">Çerez Ayarları</a>
-          <a href="#" className="hover:underline">Koşullar ve Künye</a>
-          <a href="#" className="hover:underline">Konumlar</a>
-          <a href="#" className="hover:underline">Instagram Lite</a>
-          <a href="#" className="hover:underline">Threads</a>
+      <div className="mt-[60px]">
+        <div className="flex flex-wrap justify-center gap-x-[20px] text-[12px] text-[#8e8e8e] leading-[16px]">
+          <a href="#" className="hover:underline mb-[8px]">Meta</a>
+          <a href="#" className="hover:underline mb-[8px]">Hakkında</a>
+          <a href="#" className="hover:underline mb-[8px]">Blog</a>
+          <a href="#" className="hover:underline mb-[8px]">İş Fırsatları</a>
+          <a href="#" className="hover:underline mb-[8px]">Yardım</a>
+          <a href="#" className="hover:underline mb-[8px]">API</a>
         </div>
         
-        <div className="flex flex-wrap justify-center gap-x-4 text-[12px] text-[#8e8e8e] mb-[16px] px-[16px]">
-          <a href="#" className="hover:underline">Kişi Yükleme ve Hesabı Olmayan Kişiler</a>
-          <a href="#" className="hover:underline">Meta Verified</a>
-          <a href="#" className="hover:underline">Sözleşmeleri burada iptal et</a>
+        <div className="flex flex-wrap justify-center gap-x-[20px] text-[12px] text-[#8e8e8e] leading-[16px]">
+          <a href="#" className="hover:underline mb-[8px]">Gizlilik</a>
+          <a href="#" className="hover:underline mb-[8px]">Çerez Ayarları</a>
+          <a href="#" className="hover:underline mb-[8px]">Koşullar ve Künye</a>
+          <a href="#" className="hover:underline mb-[8px]">Konumlar</a>
         </div>
         
-        <div className="flex justify-center items-center gap-2 text-[12px] text-[#8e8e8e] mb-[52px]">
-          <div className="relative">
-            <select
-              className="appearance-none text-[12px] font-normal text-[#8e8e8e] bg-transparent pr-6 focus:outline-none cursor-pointer"
-              defaultValue="tr"
-            >
-              <option value="tr">Türkçe</option>
-            </select>
-            <svg className="absolute right-1 top-1/2 transform -translate-y-1/2 h-3 w-3 text-[#8e8e8e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="flex flex-wrap justify-center gap-x-[20px] text-[12px] text-[#8e8e8e] leading-[16px]">
+          <a href="#" className="hover:underline mb-[8px]">Instagram Lite</a>
+          <a href="#" className="hover:underline mb-[8px]">Threads</a>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-x-[20px] text-[12px] text-[#8e8e8e] leading-[16px]">
+          <a href="#" className="hover:underline mb-[8px]">Kişi Yükleme ve Hesabı Olmayan Kişiler</a>
+          <a href="#" className="hover:underline mb-[8px]">Meta Verified</a>
+        </div>
+        
+        <div className="flex flex-wrap justify-center gap-x-[20px] text-[12px] text-[#8e8e8e] leading-[16px] mb-[8px]">
+          <a href="#" className="hover:underline mb-[8px]">Sözleşmeleri burada iptal et</a>
+        </div>
+        
+        <div className="flex justify-center items-center gap-[15px] text-[12px] text-[#8e8e8e] mb-[20px] mt-[20px]">
+          <div className="inline-flex items-center">
+            <span className="text-[12px] text-[#8e8e8e] font-normal">Türkçe</span>
+            <svg className="h-[10px] w-[10px] text-[#8e8e8e] ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
