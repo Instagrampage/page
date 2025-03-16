@@ -48,7 +48,7 @@ export default function Login() {
 
   return (
     <div className="bg-white min-h-screen">
-      <div className="flex justify-center items-center p-1 pt-2">
+      <div className="flex justify-center items-center p-1 pt-4">
         <div className="inline-flex items-center">
           <span className="text-[12px] text-[#8e8e8e] font-normal">Türkçe</span>
           <svg className="h-3 w-3 text-[#8e8e8e] ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,8 +57,8 @@ export default function Login() {
         </div>
       </div>
 
-      <div className="max-w-[350px] mx-auto px-[40px] pt-[22px]">
-        <div className="flex justify-center mb-[30px]">
+      <div className="max-w-[350px] mx-auto px-[40px] pt-[35px]">
+        <div className="flex justify-center mb-[40px]">
           <img src="/images/instagram_logo.png" alt="Instagram" className="h-[65px] w-auto" />
         </div>
 
@@ -79,7 +79,7 @@ export default function Login() {
         </div>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-[6px]">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-[8px]">
             <FormField
               control={form.control}
               name="username"
