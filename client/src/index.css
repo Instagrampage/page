@@ -12,9 +12,9 @@
 
   body {
     @apply bg-white text-gray-900 font-sans antialiased;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/ /* Removed to allow pull to refresh */
     max-width: 100%;
-    touch-action: pan-y;
+    touch-action: auto; /* Changed to auto to enable pull-to-refresh */
   }
 
   * {
@@ -59,7 +59,7 @@
   input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px #fafafa inset !important;
   }
-  
+
   img { /* Added CSS to disable touch actions on images */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
