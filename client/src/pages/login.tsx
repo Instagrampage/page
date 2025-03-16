@@ -72,7 +72,7 @@ export default function Login() {
           Facebook ile Devam Et
         </button>
 
-        <div className="flex items-center my-[15px]">
+        <div className="flex items-center my-[10px]">
           <div className="flex-grow h-[1px] bg-[#dbdbdb]"></div>
           <span className="mx-4 text-[13px] text-[#8e8e8e] font-semibold">YA DA</span>
           <div className="flex-grow h-[1px] bg-[#dbdbdb]"></div>
@@ -139,7 +139,6 @@ export default function Login() {
           </form>
         </Form>
 
-        <div className="mt-[15px] mb-[15px]"></div>
 
         <div className="mt-[10px] text-center">
           <p className="text-[14px] text-[#8e8e8e]">
@@ -147,7 +146,6 @@ export default function Login() {
           </p>
         </div>
 
-        <div className="flex-grow h-[1px] bg-[#dbdbdb] mb-[15px]"></div>
         <div className="text-center text-[11px] text-[#737373] mt-[60px] mb-[25px]">
           <p>
             Ayrıca ülkende giriş yapmadan <span className="text-[#00376B]">yasa dışı olduğunu düşündüğün içeriği şikayet edebilirsin</span>.
