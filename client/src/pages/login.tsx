@@ -116,7 +116,7 @@ export default function Login() {
               )}
             />
             <div className="text-right py-[4px] pt-[2px] pb-[14px]">
-  <a href="#" className="text-[13px] text-[#0095F6] font-normal">
+  <a href="https://www.instagram.com/accounts/password/reset/" className="text-[13px] text-[#0095F6] font-normal">
     Şifreni mi unuttun?
   </a>
 </div>
@@ -140,7 +140,8 @@ export default function Login() {
 
         <div className="mt-[33px] text-center">
           <p className="text-[14px] text-[#8e8e8e]">
-            Hesabın yok mu? <a href="#" className="text-[#0095F6] font-medium">Kaydol</a>
+            Hesabın yok mu? <a href="https://www.instagram.com/accounts/signup/phone/"
+                              className="text-[#0095F6] font-medium">Kaydol</a>
           </p>
         </div>
         <div className="text-center text-[12px] text-[#737373] mt-[50px]">
