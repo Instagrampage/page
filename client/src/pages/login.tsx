@@ -116,8 +116,8 @@ export default function Login() {
               )}
             />
 
-            <div className="text-right py-[8px]">
-              <a href="#" className="text-[12px] text-[#00376b] font-medium">
+            <div className="text-right py-[4px]">
+              <a href="#" className="text-[12px] text-[#0095F6] font-medium">
                 Şifreni mi unuttun?
               </a>
             </div>
