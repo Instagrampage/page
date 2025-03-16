@@ -68,13 +68,18 @@ button svg {
 
 /* Instagram butonları ve form elementleri için özel stiller */
 .instagram-btn {
-  background-color: #0095F6 !important;
+  background-color: rgb(0, 149, 246) !important;
   border-radius: 8px !important;
   font-weight: 600 !important;
   font-size: 14px !important;
   height: 32px !important;
   padding: 7px 16px !important;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  user-select: none !important;
 }
 
 .instagram-input {
