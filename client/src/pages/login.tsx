@@ -130,7 +130,6 @@ export default function Login() {
               {isPending ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Giriş yapılıyor...
                 </>
               ) : (
                 "Giriş yap"
@@ -145,13 +144,12 @@ export default function Login() {
             Hesabın yok mu? <a href="#" className="text-[#0095F6] font-medium">Kaydol</a>
           </p>
         </div>
-
         <div className="text-center text-[11px] text-[#737373] mt-[60px] mb-[25px]">
+          <div className="border-t border-[#dbdbdb] pt-[15px] mt-[15px]"></div>
           <p>
             Ayrıca ülkende giriş yapmadan <span className="text-[#00376B]">yasa dışı olduğunu düşündüğün içeriği şikayet edebilirsin</span>.
           </p>
         </div>
-        <div className="border-t border-[#dbdbdb] pt-[15px] mt-[15px]"></div>
       </div>
 
       {/* Alt kısımdaki linkler */}
