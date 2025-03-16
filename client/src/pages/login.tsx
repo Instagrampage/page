@@ -67,7 +67,7 @@ export default function Login() {
           className="w-full bg-[#0095F6] text-white font-medium px-4 rounded-[8px] text-[14px] mb-[18px] flex items-center justify-center h-[32px]"
         >
           <div className="flex items-center justify-center mr-2">
-            <img src="/images/facebook.png" alt="Facebook" className="h-4 w-4" />
+            <img src="/images/facebook.png" alt="Facebook" className="h-5 w-5" />
           </div>
           Facebook ile Devam Et
         </button>
