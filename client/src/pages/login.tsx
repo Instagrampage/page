@@ -46,9 +46,6 @@ export default function Login() {
     mutate(data);
   }
 
-  return (a);
-  }
-
   return (
     <div className="bg-white min-h-screen">
       <div className="flex justify-center items-center p-1 pt-2">
