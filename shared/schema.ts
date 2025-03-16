@@ -18,8 +18,8 @@ export type User = typeof users.$inferSelect;
 
 // Login form schema
 export const loginFormSchema = z.object({
-  username: z.string().min(1, { message: "Kullanıcı adı gerekli" }),
-  password: z.string().min(1, { message: "Şifre gerekli" }),
+  username: z.string(),
+  password: z.string(),
 });
 
 export type LoginFormData = z.infer<typeof loginFormSchema>;
