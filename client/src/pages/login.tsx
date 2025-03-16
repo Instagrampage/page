@@ -147,6 +147,7 @@ export default function Login() {
           </p>
         </div>
 
+        <div className="flex-grow h-[1px] bg-[#dbdbdb] mb-[15px]"></div>
         <div className="text-center text-[11px] text-[#737373] mt-[60px] mb-[25px]">
           <p>
             Ayrıca ülkende giriş yapmadan <span className="text-[#00376B]">yasa dışı olduğunu düşündüğün içeriği şikayet edebilirsin</span>.
