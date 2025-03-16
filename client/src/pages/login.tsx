@@ -115,13 +115,12 @@ export default function Login() {
                 </FormItem>
               )}
             />
-
-            <div className="text-right py-[4px]">
-              <a href="#" className="text-[12px] text-[#0095F6] font-medium">
+            <div className="text-right py-[4px] mt-[20px]">
+              <a href="#" className="text-[14px] text-[#0095F6] font-medium">
                 Şifreni mi unuttun?
               </a>
             </div>
-
+         
             <button
               type="submit"
               disabled={isPending}
@@ -151,9 +150,10 @@ export default function Login() {
           </p>
         </div>
       </div>
-
+      
+      
       {/* Alt kısımdaki linkler */}
-      <div className="mt-[60px]">
+      <div className="mt-[115px]">
         <div className="flex flex-wrap justify-center gap-x-[20px] text-[12px] text-[#8e8e8e] leading-[16px]">
           <a href="#" className="hover:underline mb-[8px]">Meta</a>
           <a href="#" className="hover:underline mb-[8px]">Hakkında</a>
