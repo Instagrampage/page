@@ -42,8 +42,8 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start pt-6 bg-white">
-      <div className="w-full max-w-sm px-5">
+    <div className="min-h-screen flex flex-col items-center justify-start pt-6 bg-white max-w-md mx-auto overflow-hidden touch-none">
+      <div className="w-full max-w-xs px-2">
         <div className="flex justify-center mb-5">
           <div className="relative">
             <select
@@ -61,7 +61,7 @@ export default function Login() {
         </div>
         
         <div className="flex justify-center mb-8 mt-12">
-          <h1 className="text-[40px] font-serif italic font-bold">Instagram</h1>
+          <img src="/images/instagram_logo.png" alt="Instagram" className="h-14 w-auto" />
         </div>
         
         <Button
