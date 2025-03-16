@@ -45,7 +45,7 @@ export default function Login() {
 
   return (
     <div className="bg-white min-h-screen">
-      <div className="absolute top-4 right-4">
+      <div className="flex justify-center items-center p-1 pt-2">
         <div className="inline-flex items-center">
           <span className="text-[12px] text-[#8e8e8e] font-normal">Türkçe</span>
           <svg className="h-3 w-3 text-[#8e8e8e] ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,7 +63,9 @@ export default function Login() {
           type="button"
           className="w-full bg-[#0095F6] text-white font-medium py-[5px] px-4 rounded-[8px] text-[14px] mb-[18px] flex items-center justify-center h-[36px]"
         >
-          <img src="/images/facebook.png" alt="Facebook" className="mr-2 h-5 w-5" />
+          <div className="flex items-center justify-center mr-2 h-5 w-5 bg-white rounded-full">
+            <img src="/images/facebook_logo.jpg" alt="Facebook" className="h-5 w-5 rounded-full" />
+          </div>
           Facebook ile Devam Et
         </button>
         
