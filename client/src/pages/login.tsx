@@ -43,33 +43,33 @@ export default function Login() {
 
   return (
     <div className="bg-white min-h-screen">
-      <div className="flex justify-center items-center p-3 pt-8">
+      <div className="flex justify-center items-center p-1 pt-2">
         <div className="inline-flex items-center">
-          <span className="text-[14px] text-gray-500 font-normal">Türkçe</span>
-          <svg className="h-3 w-3 text-gray-500 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span className="text-[12px] text-[#8e8e8e] font-normal">Türkçe</span>
+          <svg className="h-3 w-3 text-[#8e8e8e] ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </div>
       </div>
       
-      <div className="max-w-[360px] mx-auto px-[30px] pt-[40px]">
-        <div className="flex justify-center mb-[36px]">
-          <img src="/images/instagram_logo.png" alt="Instagram" className="h-[60px] w-auto" />
+      <div className="max-w-[350px] mx-auto px-[40px] pt-[22px]">
+        <div className="flex justify-center mb-[30px]">
+          <img src="/images/instagram_logo.png" alt="Instagram" className="h-[65px] w-auto" />
         </div>
         
         <button 
           type="button"
-          className="w-full bg-[#0095F6] text-white font-medium py-[7px] px-4 rounded-[4px] text-[14px] mb-[18px] flex items-center justify-center"
+          className="w-full bg-[#0095F6] text-white font-medium py-[5px] px-4 rounded-[4px] text-[14px] mb-[18px] flex items-center justify-center h-[34px]"
         >
-          <svg className="h-5 w-5 mr-2 text-white" viewBox="0 0 320 512" fill="#ffffff">
+          <svg className="h-5 w-5 mr-2 text-white" viewBox="0 0 320 512" fill="white" xmlns="http://www.w3.org/2000/svg">
             <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
           </svg>
           Facebook ile Devam Et
         </button>
         
-        <div className="flex items-center my-[18px]">
+        <div className="flex items-center my-[15px]">
           <div className="flex-grow h-[1px] bg-[#dbdbdb]"></div>
-          <span className="mx-4 text-[13px] text-[#737373] font-semibold">YA DA</span>
+          <span className="mx-4 text-[13px] text-[#8e8e8e] font-semibold">YA DA</span>
           <div className="flex-grow h-[1px] bg-[#dbdbdb]"></div>
         </div>
         
@@ -111,7 +111,7 @@ export default function Login() {
             />
 
             <div className="text-right py-[8px]">
-              <a href="#" className="text-[12px] text-[#0095F6] font-medium">
+              <a href="#" className="text-[12px] text-[#00376b] font-medium">
                 Şifreni mi unuttun?
               </a>
             </div>
@@ -133,8 +133,10 @@ export default function Login() {
           </form>
         </Form>
         
-        <div className="mt-[16px] text-center">
-          <p className="text-[14px] text-[#737373]">
+        <div className="mt-[10px] mb-[10px] border-b border-[#dbdbdb]"></div>
+        
+        <div className="mt-[10px] text-center">
+          <p className="text-[14px] text-[#8e8e8e]">
             Hesabın yok mu? <a href="#" className="text-[#0095F6] font-medium">Kaydol</a>
           </p>
         </div>
